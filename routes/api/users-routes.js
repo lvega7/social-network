@@ -13,7 +13,6 @@ router
   .route('/')
   .get(getAllUser)
   .post(createUser)
-//   .post(createPizza);
 
 // /api/users/:id
 router

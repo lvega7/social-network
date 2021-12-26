@@ -14,7 +14,6 @@ router
   .route('/')
   .get(getAllThought)
   .post(createThought)
-//   .post(createPizza);
 
 // /api/thoughts/:id
 router

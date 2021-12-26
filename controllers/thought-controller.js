@@ -1,18 +1,18 @@
 const { Thought } = require('../models');
 
 const thoughtController = {
-    // get all users
+    // get all Thought
     getAllThought(req, res) {
       Thought.find({})
         // .select('-__v')
         // .sort({ _id: -1 })
-        .then(dbUserData  => res.json(dbUserData ))
+        .then(dbThoughtData  => res.json(dbThoughtData ))
         .catch(err => {
           console.log(err);
           res.sendStatus(400);
         });
     },
-    // get users by id
+    // get Thought by id
     getThoughtById({ params }, res) {
       Thought.findOne({ _id: params.id })
         .then(dbThoughtData  => res.json(dbThoughtData ))
@@ -24,7 +24,7 @@ const thoughtController = {
     // // create a new thought
     createThought({ body }, res) {
       Thought.create(body)
-        .then(dbUserData => res.json(dbUserData))
+        .then(dbThoughtData => res.json(dbThoughtData))
         .catch(err => res.json(err));
     },
 
